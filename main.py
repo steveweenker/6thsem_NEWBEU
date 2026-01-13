@@ -203,7 +203,7 @@ class TelegramMonitor:
             if connection_status == "UP":
                 if self.last_status != "LIVE":
                     print("Server UP. Checking Canary...")
-                    await self.send_telegram_message("⚠️ Server responding... Verifying Database...")
+                    
                     is_functional = await self.verify_site_functional()
                     if is_functional:
                         effective_status = "LIVE"
